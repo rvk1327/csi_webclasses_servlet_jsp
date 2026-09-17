@@ -28,6 +28,26 @@
         <servlet-name>Logout</servlet-name>
         <servlet-class>controller.Logout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QueryValue</servlet-name>
+        <servlet-class>controller.QueryValue</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteData</servlet-name>
+        <servlet-class>controller.DeleteData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateStudent</servlet-name>
+        <servlet-class>controller.UpdateStudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileUploadData</servlet-name>
+        <servlet-class>controller.FileUploadData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadData</servlet-name>
+        <servlet-class>controller.DownloadData</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>hello</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -63,5 +83,25 @@
     <servlet-mapping>
         <servlet-name>Logout</servlet-name>
         <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QueryValue</servlet-name>
+        <url-pattern>/queryvalue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteData</servlet-name>
+        <url-pattern>/deletedata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateStudent</servlet-name>
+        <url-pattern>/updatestudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileUploadData</servlet-name>
+        <url-pattern>/fileuploaddata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadData</servlet-name>
+        <url-pattern>/downloaddata</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -24,7 +24,9 @@
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
 ">
-    <tx:annotation-driven transaction-manager="ht_trans"></tx:annotation-driven>
+
+    
+    <tx:annotation-driven transaction-manager="hb_trans"></tx:annotation-driven>
     
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
@@ -38,6 +40,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>model.Student</value>
+                <value>model.FileData</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -48,16 +51,18 @@
         </property>
     </bean>
     
-    <bean id="ht_temp" class="org.springframework.orm.hibernate4.HibernateTemplate">
+    <bean id="hb_temp" class="org.springframework.orm.hibernate4.HibernateTemplate">
         <property name="sessionFactory" ref="session_factory"></property>
     </bean>
     
-    <bean id="ht_trans" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <bean id="hb_trans" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="session_factory"></property>
     </bean>
+    
     
     <bean id="clg_dao" class="dbutil.CollegeDAO">
-        <property name="ht" ref="ht_temp"></property>
+        <property name="ht" ref="hb_temp"></property>
     </bean>
-
+    
+    
 </beans>
